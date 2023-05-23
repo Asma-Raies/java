@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprojet.DoctorController">
+   <children>
+      <AnchorPane fx:id="mainForm" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="loginForm" prefHeight="560.0" prefWidth="400.0" styleClass="white-bg" stylesheets="@PageDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="130.0" layoutY="151.0" text="Login Account" textFill="#5f0d65">
+                     <font>
+                        <Font name="Tahoma" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="175.0" layoutY="176.0" text="Doctor">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="loginUsername" layoutX="92.0" layoutY="231.0" prefHeight="30.0" prefWidth="220.0" promptText="username" styleClass="text-field-2" stylesheets="@PageDesign.css" />
+                  <PasswordField fx:id="loginPass" layoutX="92.0" layoutY="275.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" stylesheets="@PageDesign.css">
+                     <styleClass>
+                        <String fx:value="radius" />
+                        <String fx:value="text-field-2" />
+                     </styleClass></PasswordField>
+                  <Button fx:id="LoginButton" layoutX="92.0" layoutY="333.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="37.0" prefWidth="220.0" stylesheets="@PageDesign.css" text="Login" textFill="#c933d3e0">
+                     <styleClass>
+                        <String fx:value="btn-2" />
+                        <String fx:value="radius" />
+                     </styleClass></Button>
+                  <ComboBox fx:id="LoginSelect" layoutX="117.0" layoutY="442.0" onAction="#switchPage" prefHeight="37.0" prefWidth="150.0" promptText="Select User" stylesheets="@PageDesign.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="text-field-1" />
+                     </styleClass>
+                  </ComboBox>
+                  <ImageView fitHeight="117.0" fitWidth="149.0" layoutX="142.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/doctor.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

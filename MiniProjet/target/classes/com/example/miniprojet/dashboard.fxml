@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniprojet.DashboardController">
+    <children>
+        <StackPane layoutX="55.0" layoutY="69.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <BorderPane layoutX="69.0" layoutY="48.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <top>
+                                <AnchorPane prefHeight="48.0" prefWidth="1000.0" styleClass="maintop-form" stylesheets="@PageDesign.css" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <AnchorPane layoutY="2.0" prefHeight="39.0" prefWidth="1006.0" styleClass="top-form" stylesheets="@PageDesign.css" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+                                            <children>
+                                                <Button fx:id="LogoutBtn" layoutX="948.0" layoutY="4.0" mnemonicParsing="false" onAction="#logout" styleClass="btn_1" stylesheets="@PageDesign.css" text="logout" textFill="#d21010">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Button>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Hospital Management system">
+                                                    <font>
+                                                        <Font name="System Bold" size="22.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </top>
+                            <left>
+                                <AnchorPane prefHeight="552.0" prefWidth="221.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <AnchorPane prefHeight="552.0" prefWidth="221.33333333333334" styleClass="nav-form" stylesheets="@PageDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <ImageView fitHeight="86.0" fitWidth="119.0" layoutX="61.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../image/userrr.png" />
+                                       </image></ImageView>
+                                                <Label layoutX="64.0" layoutY="114.0" text="Welcome" textAlignment="CENTER">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="80.0" layoutY="141.0" text="Admin">
+                                                    <font>
+                                                        <Font name="System Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Button fx:id="HomeBtn" layoutX="11.0" layoutY="201.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="33.0" prefWidth="185.0" styleClass="nav-btn" stylesheets="@PageDesign.css" text="Home" />
+                                                <Line endX="97.66667175292969" endY="1.52587890625E-5" layoutX="97.0" layoutY="181.0" startX="-72.04045104980469" startY="1.52587890625E-5" />
+                                                <Button fx:id="AddNurse" layoutX="11.0" layoutY="276.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="33.0" prefWidth="185.0" styleClass="nav-btn" stylesheets="@PageDesign.css" text="Nurses" />
+                                                <Button fx:id="addSalle" layoutX="11.0" layoutY="306.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="33.0" prefWidth="185.0" styleClass="nav-btn" stylesheets="@PageDesign.css" text="Salles" />
+                                                <Button fx:id="addService" layoutX="11.0" layoutY="340.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="33.0" prefWidth="185.0" styleClass="nav-btn" stylesheets="@PageDesign.css" text="Service" />
+                                                <Button fx:id="AddBtn" layoutX="11.0" layoutY="242.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="33.0" prefWidth="185.0" styleClass="nav-btn" stylesheets="@PageDesign.css" text="Doctors" />
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </left>
+                            <center>
+                                <AnchorPane onMouseClicked="#addSalleSelect" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <AnchorPane fx:id="HomeForm" layoutX="155.0" layoutY="154.0" prefHeight="551.3333333333334" prefWidth="784.6666666666666" stylesheets="@PageDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <AnchorPane layoutX="50.0" layoutY="14.0" prefHeight="172.0" prefWidth="847.0" stylesheets="@PageDesign.css">
+                                                    <styleClass>
+                                                        <String fx:value="white-bgl" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <AnchorPane layoutX="22.0" layoutY="19.0" prefHeight="134.0" prefWidth="213.0" styleClass="nav-form" stylesheets="@PageDesign.css">
+                                                            <children>
+                                                                <Label layoutX="117.0" layoutY="20.0" styleClass="nav-btn" stylesheets="@PageDesign.css" text="Total Doctors" textFill="#14010129" />
+                                                <ImageView fitHeight="71.0" fitWidth="73.0" layoutX="14.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../image/doctor.png" />
+                                                   </image></ImageView>
+                                                <Label fx:id="TotalDoctor" layoutX="164.0" layoutY="103.0" />
+                                                <Label fx:id="totalDoctor" layoutX="134.0" layoutY="90.0" prefHeight="17.0" prefWidth="60.0">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane layoutX="289.0" layoutY="19.0" prefHeight="134.0" prefWidth="213.0" styleClass="nav-form" stylesheets="@PageDesign.css">
+                                                            <children>
+                                                                <Label layoutX="133.0" layoutY="14.0" styleClass="nav-btn" stylesheets="@PageDesign.css" text="Total Nurse" textFill="#14010129" />
+                                                <ImageView fitHeight="67.0" fitWidth="89.0" layoutX="14.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../image/nurse.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="totalNurse" layoutX="146.0" layoutY="89.0" prefHeight="27.0" prefWidth="53.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane layoutX="570.0" layoutY="18.0" prefHeight="137.0" prefWidth="230.0" styleClass="nav-form" stylesheets="@PageDesign.css">
+                                                            <children>
+                                                                <Label layoutX="144.0" layoutY="14.0" styleClass="nav-btn" stylesheets="@PageDesign.css" text="Total Salle" textFill="#14010129">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font></Label>
+                                                <ImageView fitHeight="64.0" fitWidth="94.0" layoutX="14.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../image/mordha.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="totalSalle" layoutX="166.0" layoutY="88.0" prefHeight="24.0" prefWidth="50.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="CrudForm" layoutX="26.0" layoutY="54.0" prefHeight="552.0" prefWidth="788.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <AnchorPane layoutX="23.0" layoutY="21.0" prefHeight="525.0" prefWidth="290.0" stylesheets="@PageDesign.css">
+                                                    <styleClass>
+                                                        <String fx:value="white-bgl" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <Label layoutX="15.0" layoutY="109.0" text="Full Name">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="fullNameDoctor" layoutX="100.0" layoutY="104.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                                        <TextField fx:id="adresseDoctor" layoutX="100.0" layoutY="143.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                                        <Label layoutX="22.0" layoutY="148.0" text="Adresse">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="mobileDoctor" layoutX="100.0" layoutY="181.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                                        <Label layoutX="29.0" layoutY="186.0" text="Phone">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="specialiteDoctor" layoutX="100.0" layoutY="218.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                                        <Button fx:id="addBtn" layoutX="22.0" layoutY="373.0" mnemonicParsing="false" onAction="#addDoctorAdd" prefHeight="39.0" prefWidth="91.0" styleClass="add-btn" stylesheets="@PageDesign.css" text="ADD" />
+                                                        <Button fx:id="updateBtn" layoutX="168.0" layoutY="373.0" mnemonicParsing="false" onAction="#AddDoctorUpdate" prefHeight="39.0" prefWidth="91.0" styleClass="update-btn" stylesheets="@PageDesign.css" text="Update" />
+                                                        <Button fx:id="deleteBtn" layoutX="22.0" layoutY="448.0" mnemonicParsing="false" onAction="#AddDoctorDelete" prefHeight="39.0" prefWidth="91.0" styleClass="delete-btn" stylesheets="@PageDesign.css" text="Delete" />
+                                                        <Button fx:id="clearBtn" layoutX="166.0" layoutY="448.0" mnemonicParsing="false" onAction="#AddDoctorReset" prefHeight="39.0" prefWidth="94.0" styleClass="clear-btn" stylesheets="@PageDesign.css" text="Clear" />
+                                                        <Label layoutX="11.0" layoutY="71.0" text="Code Doctor">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="codeDoctor" layoutX="99.0" layoutY="66.0" prefHeight="27.0" prefWidth="175.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                                        <Label layoutX="98.0" layoutY="20.0" prefHeight="26.0" prefWidth="68.0" text="Doctor" textAlignment="CENTER" textFill="#131a67">
+                                                            <font>
+                                                                <Font name="Algerian" size="17.0" />
+                                                            </font>
+                                                        </Label>
+                                          <Label layoutX="16.0" layoutY="223.0" text="Specialized">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="16.0" layoutY="260.0" text="Password">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="ServiceDoctor" layoutX="100.0" layoutY="295.0" prefHeight="27.0" prefWidth="174.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Label layoutX="21.0" layoutY="300.0" text="Service">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <PasswordField fx:id="passwordDoctor" layoutX="100.0" layoutY="256.0" prefHeight="27.0" prefWidth="174.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="325.0" layoutY="24.0" prefHeight="520.0" prefWidth="608.0" stylesheets="@PageDesign.css">
+                                                    <styleClass>
+                                                        <String fx:value="white-bgl" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <TableView fx:id="tableViewDoctor" layoutX="14.0" layoutY="56.0" onMouseClicked="#addDoctorSelect" prefHeight="443.0" prefWidth="573.0" styleClass="tablee-view" stylesheets="@PageDesign.css">
+                                                            <columns>
+                                                                <TableColumn fx:id="DoctorCode" prefWidth="66.0" text="code" />
+                                                                <TableColumn fx:id="DoctorName" prefWidth="102.0" text="Full Name" />
+                                                                <TableColumn fx:id="DoctorAdresse" prefWidth="95.0" text="adresse" />
+                                                                <TableColumn fx:id="DoctorMobile" prefWidth="83.0" text="mobile" />
+                                                                <TableColumn fx:id="DoctorSpectialite" prefWidth="110.0" text="specialized" />
+                                                <TableColumn fx:id="DoctorService" prefWidth="115.0" text="Service" />
+                                                            </columns>
+                                                        </TableView>
+                                                        <TextField fx:id="search" layoutX="58.0" layoutY="14.0" prefHeight="27.0" prefWidth="194.0" promptText="search" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="12.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                              <AnchorPane fx:id="CrudNurse" layoutX="19.0" layoutY="14.0" prefHeight="542.0" prefWidth="902.0" visible="false">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="7.0" prefHeight="525.0" prefWidth="263.0" stylesheets="@PageDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bgl" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="109.0" text="Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="NameNurse" layoutX="84.0" layoutY="105.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Label layoutX="11.0" layoutY="164.0" text="Adresse">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="adresseNurse" layoutX="85.0" layoutY="159.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Label layoutX="15.0" layoutY="215.0" text="Phone">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="mobileNurse" layoutX="85.0" layoutY="210.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Button fx:id="addBtnN" layoutX="15.0" layoutY="374.0" mnemonicParsing="false" onAction="#addNurseAdd" prefHeight="39.0" prefWidth="91.0" styleClass="add-btn" stylesheets="@PageDesign.css" text="ADD" />
+                                          <Button fx:id="updateBtnN" layoutX="125.0" layoutY="374.0" mnemonicParsing="false" onAction="#AddNurseUpdate" prefHeight="39.0" prefWidth="91.0" styleClass="update-btn" stylesheets="@PageDesign.css" text="Update" />
+                                          <Button fx:id="deleteBtnN" layoutX="15.0" layoutY="434.0" mnemonicParsing="false" onAction="#AddNurseDelete" prefHeight="39.0" prefWidth="91.0" styleClass="delete-btn" stylesheets="@PageDesign.css" text="Delete" />
+                                          <Button fx:id="clearBtnN" layoutX="119.0" layoutY="434.0" mnemonicParsing="false" onAction="#AddNurseReset" prefHeight="39.0" prefWidth="94.0" styleClass="clear-btn" stylesheets="@PageDesign.css" text="Clear" />
+                                          <Label layoutX="15.0" layoutY="70.0" text="ID Nurse">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="idNurse" layoutX="84.0" layoutY="66.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Label layoutX="98.0" layoutY="20.0" prefHeight="26.0" prefWidth="68.0" text="Nurse" textAlignment="CENTER" textFill="#131a67">
+                                             <font>
+                                                <Font name="Algerian" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="listSalle" layoutX="85.0" layoutY="298.0" prefHeight="27.0" prefWidth="172.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Text layoutX="21.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salle" />
+                                          <TextField fx:id="salary" layoutX="84.0" layoutY="263.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Text layoutX="17.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="288.0" layoutY="10.0" prefHeight="520.0" prefWidth="621.0" stylesheets="@PageDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bgl" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="TableViewNurse" layoutX="10.0" layoutY="56.0" onMouseClicked="#addNurseSelect" prefHeight="450.0" prefWidth="597.0" styleClass="tablee-view" stylesheets="@PageDesign.css">
+                                             <columns>
+                                                <TableColumn fx:id="IdNurseCol" prefWidth="69.0" text="ID Nurse" />
+                                                <TableColumn fx:id="NurseAdresse" prefWidth="98.0" text="adresse" />
+                                                <TableColumn fx:id="nurseMobile" prefWidth="135.0" text="Mobile Number" />
+                                                <TableColumn fx:id="salaryNurse" prefWidth="96.0" text="Salary" />
+                                                <TableColumn fx:id="numSalle" prefWidth="109.0" text=" Salle" />
+                                                <TableColumn fx:id="NurseNameCol" prefWidth="95.0" text="Name Nurse" />
+                                             </columns>
+                                          </TableView>
+                                          <TextField fx:id="search1" layoutX="57.0" layoutY="21.0" prefHeight="27.0" prefWidth="207.0" promptText="Search" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <ImageView fitHeight="33.0" fitWidth="41.0" layoutX="24.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="CrudSalle" layoutX="7.0" layoutY="18.0" prefHeight="552.0" prefWidth="916.0" visible="false">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="6.0" prefHeight="525.0" prefWidth="263.0" stylesheets="@PageDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bgl" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="109.0" text="nb beds">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="nbBed" layoutX="84.0" layoutY="105.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Label layoutX="15.0" layoutY="148.0" text="Service">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="addBtnS" layoutX="15.0" layoutY="305.0" mnemonicParsing="false" onAction="#addSalleAdd" prefHeight="39.0" prefWidth="91.0" styleClass="add-btn" stylesheets="@PageDesign.css" text="ADD" />
+                                          <Button fx:id="updateBtns" layoutX="123.0" layoutY="305.0" mnemonicParsing="false" onAction="#AddSalleUpdate" prefHeight="39.0" prefWidth="91.0" styleClass="update-btn" stylesheets="@PageDesign.css" text="Update" />
+                                          <Button fx:id="deleteBtnS" layoutX="15.0" layoutY="364.0" mnemonicParsing="false" onAction="#AddSalleDelete" prefHeight="39.0" prefWidth="91.0" styleClass="delete-btn" stylesheets="@PageDesign.css" text="Delete" />
+                                          <Button fx:id="clearBedS" layoutX="120.0" layoutY="364.0" mnemonicParsing="false" onAction="#AddSalleReset" prefHeight="39.0" prefWidth="94.0" styleClass="clear-btn" stylesheets="@PageDesign.css" text="Clear" />
+                                          <Label layoutX="98.0" layoutY="20.0" prefHeight="26.0" prefWidth="68.0" text="Salle" textAlignment="CENTER" textFill="#131a67">
+                                             <font>
+                                                <Font name="Algerian" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="idService" layoutX="83.0" layoutY="144.0" prefHeight="27.0" prefWidth="174.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <TextField fx:id="IdSalle" layoutX="84.0" layoutY="69.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Text layoutX="15.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Num salle">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="294.0" layoutY="8.0" prefHeight="522.0" prefWidth="627.0" stylesheets="@PageDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bgl" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="tableViewSalle" layoutX="13.0" layoutY="58.0" onMouseClicked="#addSalleSelect" prefHeight="450.0" prefWidth="601.0" stylesheets="@PageDesign.css">
+                                             <columns>
+                                                <TableColumn fx:id="IdSalleCol" prefWidth="165.0" text="ID Salle" />
+                                                <TableColumn fx:id="nbBedCol" prefWidth="233.0" text="number of Beds" />
+                                                <TableColumn fx:id="serviceColl" prefWidth="206.0" text="Service" />
+                                             </columns>
+                                          </TableView>
+                                          <TextField layoutX="52.0" layoutY="14.0" prefHeight="27.0" prefWidth="227.0" promptText="Search" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <ImageView fitHeight="34.0" fitWidth="37.0" layoutX="13.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="CrudService" layoutX="19.0" layoutY="30.0" onMouseClicked="#addSalleSelect" prefHeight="557.0" prefWidth="921.0" visible="false">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="6.0" prefHeight="525.0" prefWidth="263.0" stylesheets="@PageDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bgl" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="12.0" layoutY="110.0" text="Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="nameService" layoutX="84.0" layoutY="105.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Label layoutX="15.0" layoutY="148.0" text="Bloc">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="Bloc" layoutX="84.0" layoutY="144.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Button fx:id="addBtnS1" layoutX="15.0" layoutY="305.0" mnemonicParsing="false" onAction="#addServiceAdd" prefHeight="39.0" prefWidth="91.0" styleClass="add-btn" stylesheets="@PageDesign.css" text="ADD" />
+                                          <Button fx:id="updateBtns1" layoutX="123.0" layoutY="305.0" mnemonicParsing="false" onAction="#AddServiceUpdate" prefHeight="39.0" prefWidth="91.0" styleClass="update-btn" stylesheets="@PageDesign.css" text="Update" />
+                                          <Button fx:id="deleteBtnS1" layoutX="15.0" layoutY="364.0" mnemonicParsing="false" onAction="#AddServiceDelete" prefHeight="39.0" prefWidth="91.0" styleClass="delete-btn" stylesheets="@PageDesign.css" text="Delete" />
+                                          <Button fx:id="clearBedS1" layoutX="120.0" layoutY="364.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0" styleClass="clear-btn" stylesheets="@PageDesign.css" text="Clear" />
+                                          <Label layoutX="15.0" layoutY="70.0" text="Code ">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="codeeService" layoutX="84.0" layoutY="66.0" prefHeight="25.0" prefWidth="173.0" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <Label layoutX="98.0" layoutY="20.0" prefHeight="26.0" prefWidth="68.0" text="Service" textAlignment="CENTER" textFill="#131a67">
+                                             <font>
+                                                <Font name="Algerian" size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="284.0" layoutY="9.0" prefHeight="520.0" prefWidth="633.0" stylesheets="@PageDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bgl" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="tableViewService" layoutX="10.0" layoutY="56.0" onMouseClicked="#addServiceSelect" prefHeight="450.0" prefWidth="598.0" styleClass="tablee-view" stylesheets="@PageDesign.css">
+                                             <columns>
+                                                <TableColumn fx:id="CodeServiceCol" prefWidth="192.0" text="Code Service" />
+                                                <TableColumn fx:id="NameServiceCol" prefWidth="205.0" text="Name Service" />
+                                                <TableColumn fx:id="BlocCol" prefWidth="200.0" text="Bloc" />
+                                             </columns>
+                                          </TableView>
+                                          <TextField fx:id="searchService" layoutX="58.0" layoutY="21.0" onKeyTyped="#AddServiceSearch" prefHeight="27.0" prefWidth="199.0" promptText="search" styleClass="textfield" stylesheets="@PageDesign.css" />
+                                          <ImageView fitHeight="29.0" fitWidth="34.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../image/search.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </center>
+                        </BorderPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
